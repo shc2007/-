@@ -1,0 +1,53 @@
+public class test{
+    public static void main(String []args)
+    {
+       String jud="example@163.com";
+       boolean flag=judgment(jud);
+       if(flag==true)
+       {
+        System.out.println("Yes");
+       }
+       else{
+        System.out.println("No");
+       }
+    }
+    public static boolean judgment(String jud)
+    {
+        if (!jud.matches("[a-zA-Z0-9@.]+"))
+        {
+            return false;
+        }
+        int k1=jud.indexOf("@");
+       int k2=jud.indexOf("@",k1+1);
+       if(k1==-1 || k2!=-1)
+       {
+        return false;
+       }
+        if(k1==0 || k1==jud.length()-1)
+        {
+            return false;
+        }
+        String subs1=jud.substring(0,k1);
+        String subs2=jud.substring(k1+1);
+        if(subs1.contains("."))
+        {
+            return false;
+        }
+        if(!subs2.contains("."))
+        {
+            return false;
+        }
+       String[] parts = jud.split("\\.",-1);
+        for(String part : parts){
+            if (part.isEmpty()){
+                return false;
+            }
+            char first=part.charAt(0);
+            char last=part.charAt(part.length() - 1);
+            if (!Character.isLetterOrDigit(first) || !Character.isLetterOrDigit(last)){
+                return false;
+            }
+        }
+        return true;
+    }
+}
