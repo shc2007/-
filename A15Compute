@@ -1,0 +1,138 @@
+import java.io.*;
+import java.util.*;
+public class Compute{
+    public static void main(String []args)
+    {
+         String filename = args[0];
+        String[] lines = getAllLinesFromFile(filename);
+        List<Double> dataList = new ArrayList<>();
+        int lineNumber = 0;
+        for (String line : lines) {
+            lineNumber++;
+            line = line.trim();
+            if (line.isEmpty()) {
+                continue;
+            }
+            try {
+                double value = Double.parseDouble(line);
+                if (value >= 0 && value <= 1) {
+                    dataList.add(value);
+                } else {
+                    System.err.printf("Warning: Line %d value %.6f outside [0,1], skipping%n", 
+                                    lineNumber, value);
+                }
+            } catch (NumberFormatException e) {
+                System.err.printf("Warning: Line %d invalid number '%s', skipping%n", 
+                                lineNumber, line);
+            }
+        }
+        if (dataList.isEmpty()) {
+            System.err.println("Error: No valid data found");
+            System.exit(1);
+        }
+        double[] data = new double[dataList.size()];
+        for (int i = 0; i < dataList.size(); i++) {
+            data[i] = dataList.get(i);
+        }
+        double m1=Static.max(data);
+        double m2=Static.mean(data);
+        double m3=Static.variance(data);
+        double m4;
+        if((data.length)%2==1)
+        {
+            m4=Static.select(data, (data.length+1)/2);
+        }
+        else{
+            double left=Static.select(data,data.length/2);
+            double right=Static.select(data, data.length/2+1);
+            m4=(left+right)/2.0;
+        }
+        int []b=Static.histogram(data);
+        int maxc=b[0];
+        double m5=data[0];
+        for(int i=1;i<data.length;i++)
+        {
+            if(b[i]>maxc)
+            {
+                maxc=b[i];
+                m5=data[i];
+            }
+        }
+        double m6=data[0];
+        double mind=Math.abs(m6-m2);
+        for(int i=1;i<data.length;i++)
+        {
+            double d=Math.abs(data[i]-m2);
+            if(d<mind)
+            {
+                mind=d;
+                m6=data[i];
+            }
+        }
+        System.out.printf("Max:",m1);
+        System.out.printf("Mean:",m2);
+        System.out.printf("Variance:",m3);
+        System.out.printf("Median:",m4);
+        System.out.printf("The Most often:",m5);
+        System.out.printf("The nearest to mean:",m6);
+        System.out.print("小于1倍方差：");
+        for(int i=0;i<data.length;i++)
+        {
+            double dis=Math.abs(data[i]-m2);
+            if(dis<Static.variance(data))
+            {
+                System.out.print(data[i]);
+                System.out.print(" ");
+            }
+        }
+        System.out.println("");
+        System.out.print("小于2倍方差：");
+        for(int i=0;i<data.length;i++)
+        {
+            double dis=Math.abs(data[i]-m2);
+            if(dis<2*Static.variance(data))
+            {
+                System.out.print(data[i]);
+                System.out.print(" ");
+            }
+        }
+        System.out.println("");
+        System.out.print("小于3倍方差：");
+        for(int i=0;i<data.length;i++)
+        {
+            double dis=Math.abs(data[i]-m2);
+            if(dis<3*Static.variance(data))
+            {
+                System.out.print(data[i]);
+                System.out.print(" ");
+            }
+        }
+    }
+    public static String[] getAllLinesFromFile(String fileName) {
+        int numLines = 0;
+        BufferedReader br = null;
+        ArrayList<String> strList = new ArrayList<String>();
+        try {
+            br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF-8"));
+
+            String temp = null;
+            while((temp = br.readLine()) != null){  
+                strList.add(temp);
+            }
+            numLines = strList.size();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                br.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        String[] res = new String[numLines];
+        for(int i  = 0; i < numLines; i++) {
+            res[i] = strList.get(i);
+        }
+		return res;
+	}
+}
