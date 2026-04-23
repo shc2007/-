@@ -1,0 +1,19 @@
+public class test10{
+    public static void main(String[] args) {
+       double n=Integer.parseInt(args[0]);
+       int cnt=1;
+       double p=1;
+       double e=1;
+       double k=n-3;
+       while(cnt<n-2)
+       {
+        p*=(k/(n-2));
+        e+=1/p;
+        System.out.println(e);
+        cnt++;
+        k--;
+       }
+       System.out.println(e);
+       System.out.println(p);
+    }
+}
