@@ -1,0 +1,43 @@
+public class test9{
+    public static void main(String []args)
+    {
+        int n=Integer.parseInt(args[0]);
+        int [][] a=mat(n);
+        for(int i=0;i<a.length;i++)
+        {
+            for(int j=0;j<a.length;j++)
+            {
+                System.out.print(a[i][j]);
+                if(j<a.length-1)
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+            
+        }
+
+    }
+    public static int[][] mat(int n)
+    {
+        if(n==1)
+        {
+            return new int[][]{{1}}; 
+        }
+        int [][]a=mat(n-1);
+        int size=a.length;
+        int nsize=size*2;
+        int [][]cur=new int[nsize][nsize];
+        for (int i=0;i<size;i++)
+        {
+            for(int j=0;j<size;j++)
+            {
+                cur[i][j]=a[i][j];
+                cur[i][j+size]=a[i][j];
+                cur[i+size][j]=a[i][j];
+                cur[i+size][j+size]=1-a[i][j];
+            }
+        }
+        return cur;    
+    }
+}
