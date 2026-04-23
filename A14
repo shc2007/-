@@ -1,0 +1,40 @@
+public class test14 {
+    public static void main(String[] args){
+        int N = Integer.parseInt(args[0]);
+        int[][] matrix=new int[N][N];
+        int top=0, bot=N-1;
+        int left=0, right=N-1;
+        int num=1;
+        while(num<=N*N) {
+            for(int col=left; col<=right;col++) {
+                matrix[top][col]=num++;
+            }
+            top++;
+            for(int row=top; row<=bot;row++) {
+                matrix[row][right]=num++;
+            }
+            right--;
+            if(top<=bot) {
+                for(int col=right; col>=left;col--) {
+                    matrix[bot][col]=num++;
+                }
+                bot--;
+            }
+            if(left<=right) {
+                for(int row=bot; row>=top;row--) {
+                    matrix[row][left]=num++;
+                }
+                left++;
+            }
+        }
+        for(int i = 0;i < N;i++) {
+            for(int j = 0;j<N;j++) {
+                System.out.print(matrix[i][j]);
+                if(j<N-1) {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
