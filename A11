@@ -1,0 +1,35 @@
+import java.util.*;
+public class test11{
+    public static void main(String []args)
+    {
+        int n=Integer.parseInt(args[0]);
+        List<List<Integer>> a=new ArrayList<>();
+        gene(n,a);
+        for(List<Integer> x:a)
+        {
+            System.out.println(x);
+        }
+    }
+    public static void gene(int n, List<List<Integer>> result) {
+        List<Integer> current = new ArrayList<>();
+        boolean[] used = new boolean[n + 1];
+        recur(current, used, n, result);
+    }
+    
+    private static void recur(List<Integer> current, boolean[] used, int n, List<List<Integer>> result) {
+        if (current.size() == n) {
+            result.add(new ArrayList<>(current));
+            return;
+        }
+        
+        for (int i = 1; i <= n; i++) {
+            if (!used[i]) {
+                used[i] = true;
+                current.add(i);
+                recur(current, used, n, result);
+                current.remove(current.size() - 1);
+                used[i] = false;
+            }
+        }
+    }
+}
