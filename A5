@@ -1,0 +1,20 @@
+public class test5{
+    public static void main(String []args)
+    {
+        for(int i=1;i<=2048;i*=2)
+        {
+            double a1=Math.log(i);
+            double a2=i;
+            double a3=i/(Math.log(i));
+            double a4=i*i;
+            double a5=a4*i;
+            System.out.print("x=");
+            System.out.println(i);
+            System.out.println(a1);
+            System.out.println(a2);
+            System.out.println(a3);
+            System.out.println(a4);
+            System.out.println(a5);
+        }
+    }
+}
