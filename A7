@@ -1,0 +1,23 @@
+public class test7{
+    public static void main(String []args)
+    {
+        int []sort=new int[5];
+        for(int i=0;i<5;i++)
+        {
+            sort[i]=Integer.parseInt(args[i]);
+        }
+        for(int j=0;j<4;j++)
+        {
+            for(int k=0;k<4-j;k++)
+            {
+                if(sort[k]>sort[k+1])
+                {
+                 int temp=sort[k];
+                 sort[k]=sort[k+1];
+                 sort[k+1]=temp;
+                }
+            }
+        }
+        System.out.println(sort[2]);
+    }
+}
