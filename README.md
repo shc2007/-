@@ -34,19 +34,19 @@
 
 ## Question 9
 源码：
-[lab4-String类-t9](https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/lab4-String%E7%B1%BB-t9)
+[test9.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test9.java)
 
 ## Question 10
 源码：
-[lab4-String类-t10](https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/lab4-String%E7%B1%BB-t10)
+[test10.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test10.java)
 
 ## Question 11
 源码：
-[lab4-String类-t11](https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/lab4-String%E7%B1%BB-t11)
+[test11.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test11.java)
 
 ## Question 12
 源码：
-[Clean.java](https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/Clean.java)
+[Clean.java](https://github.com/shc2007/-/blob/lab3/src/main/java/Clean.java)
 
 添加了--log参数和--stats参数，--log参数用来记录日志和输出日志，记录有用的数据和状态指定文件后会把日志写到指定文件中。
 --stats参数用来控制是否输出日志的行为
