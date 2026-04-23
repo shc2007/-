@@ -9,7 +9,6 @@ public class test10{
        {
         p*=(k/(n-2));
         e+=1/p;
-        System.out.println(e);
         cnt++;
         k--;
        }
