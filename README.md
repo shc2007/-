@@ -1,49 +1,40 @@
-﻿# 浣跨敤String绫?
-## 1.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/lab3/src/main/java/test1.java>
+﻿# 使用String类
 
-## 2.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/lab3/src/main/java/test2.java>
+## Question 1
+[test1.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test1.java)
 
-## 3.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/lab3/src/main/java/test3.java>
+## Question 2
+[test2.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test2.java)
 
-## 4.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/lab3/src/main/java/test4.java>
+## Question 3
+[test3.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test3.java)
 
-## 5.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/lab3/src/main/java/test5.java>
+## Question 4
+[test4.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test4.java)
 
-## 6.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/lab3/src/main/java/test6.java>
+## Question 5
+[test5.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test5.java)
 
-## 7.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/lab3/src/main/java/test7.java>
+## Question 6
+[test6.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test6.java)
 
-## 8.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/lab3/src/main/java/test8.java>
+## Question 7
+[test7.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test7.java)
 
-## 9.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/lab4-String%E7%B1%BB-t9>
+## Question 8
+[test8.java](https://github.com/shc2007/-/blob/lab3/src/main/java/test8.java)
 
-## 10.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/lab4-String%E7%B1%BB-t10>
-## 11.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/lab4-String%E7%B1%BB-t11>
-## 12.
-杩欐槸杩欓鐨勪唬鐮侀摼鎺ワ細
-<https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/Clean.java>
-娣诲姞浜?-log鍙傛暟鍜?-stats鍙傛暟锛?-log鍙傛暟鐢ㄦ潵璁板綍鏃ュ織鍜岃緭鍑烘棩蹇楋紝璁板綍鏈夌敤鐨勬暟鎹拰鐘舵€佹寚瀹氭枃浠跺悗浼氭妸鏃ュ織鍐欏埌鎸囧畾鏂囦欢涓€?
---stats鍙傛暟鐢ㄦ潵鎺у埗鏄惁杈撳嚭鏃ュ織鐨勮涓?
+## Question 9
+[lab4-String类-t9](https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/lab4-String%E7%B1%BB-t9)
 
+## Question 10
+[lab4-String类-t10](https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/lab4-String%E7%B1%BB-t10)
+
+## Question 11
+[lab4-String类-t11](https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/lab4-String%E7%B1%BB-t11)
+
+## Question 12
+[Clean.java](https://github.com/shc2007/-/blob/shc2007-lab4-cleant12/Clean.java)
+
+添加了--log参数和--stats参数，--log参数用来记录日志和输出日志，记录有用的数据和状态指定文件后会把日志写到指定文件中。
+--stats参数用来控制是否输出日志的行为
