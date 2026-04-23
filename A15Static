@@ -1,0 +1,74 @@
+import java.util.*;
+public class Static{
+    public static double max(double a[])
+    {
+        double m=a[0];
+        for(int i=1;i<a.length;i++)
+        {
+            if((a[i]>m))
+            {
+                m=a[i];
+            }
+        }
+        return m;
+    }
+    public static double min(double a[])
+    {
+        double m=a[0];
+        for(int i=1;i<a.length;i++)
+        {
+            if((a[i]<m))
+            {
+                m=a[i];
+            }
+        }
+        return m;
+    }
+    public static double mean(double a[])
+    {
+        double ave;
+        double sum=0;
+        for(int i=0;i<a.length;i++)
+        {
+            sum+=a[i];
+        }
+        ave=sum/(a.length);
+        return ave;
+    }
+    public static double variance(double a[])
+    {
+        double var;
+        double ave=mean(a);
+        double sum=0;
+        for(int i=0;i<a.length;i++)
+        {
+            sum+=Math.pow(a[i]-ave, 2);
+        }
+        var=sum/a.length;
+        return var;
+    }
+    public static double select(double a[],int k)
+    {
+        double[] b=Arrays.copyOf(a, a.length);
+        Arrays.sort(b);
+        double t=b[b.length-k];
+        return t;
+    }
+    public static int []histogram(double a[])
+    {
+        int []b=new int[a.length];
+        for(int i=0;i<a.length;i++)
+        {
+            int cnt=0;
+            for(int j=0;j<a.length;j++)
+            {
+                if(a[j]==a[i])
+                {
+                    cnt++;
+                }
+            }
+            b[i]=cnt;
+        }
+        return b;
+    }
+}
