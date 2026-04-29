@@ -3,8 +3,8 @@
         String filename=args[0];
         double []s=StdAudio.read(filename);
         StdAudio.play(filename);
-        System.out.println("閲囨牱鐐规暟閲忥細"+s.length);
-        System.out.println("鏃堕暱锛堢锛?"+s.length/44100.0);
+        System.out.println("采样点数量："+s.length);
+        System.out.println("时长（秒）："+s.length/44100.0);
         double m=s[0];
         for(int i=1;i<s.length;i++)
         {
@@ -13,7 +13,7 @@
                 m=s[i];
             }
         }
-        System.out.println("宄板€兼尟骞?"+m);
+        System.out.println("峰值振幅："+m);
         System.out.println("rms = " + rms(s));
     }
     public static double rms(double[] s) {
