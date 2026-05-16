@@ -1,5 +1,5 @@
 
-public class Person{
+public abstract class Person{
     public enum  Gender
     {
         MALE,FEMALE;
@@ -8,6 +8,7 @@ public class Person{
     private int age;
     private Gender gender;
 
+    public abstract void work();
     public Person(){
         this.name = new Name("tomie", "he");
     }

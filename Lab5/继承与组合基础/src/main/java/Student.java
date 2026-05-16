@@ -6,6 +6,10 @@ public class Student extends Person{
         super(age, gender, name);
         this.major=major;
     }
+    public void work()
+    {
+        System.out.println("I am studying"+major);
+    }
     @Override
     public void talk()
     {
